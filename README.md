@@ -3,7 +3,7 @@ Dynamic Sampling for LLMs: A Meta-Cognitive Approach with Working Memory
 
 ## Executive Summary
 
-This document outlines a novel approach to enhancing the coherence, adaptability, and contextual awareness of Large Language Models (LLMs) through dynamic parameter adjustment. By implementing a system that combines working memory and meta-cognitive control mechanisms, we demonstrate how LLMs can adapt their generation parameters in real-time based on content analysis, effectively mimicking aspects of human cognitive flexibility. Our experimental results show marked improvements in sustained coherence, emotional progression, and information retention across extended text generation tasks.
+This outlines a novel approach to enhancing the coherence, adaptability, and contextual awareness of Large Language Models (LLMs) through dynamic parameter adjustment. By implementing a system that combines working memory and meta-cognitive control mechanisms, we demonstrate how LLMs can adapt their generation parameters in real-time based on content analysis, effectively mimicking aspects of human cognitive flexibility. Our experimental results show marked improvements in sustained coherence, emotional progression, and information retention across extended text generation tasks.
 
 ## 1. Introduction
 
