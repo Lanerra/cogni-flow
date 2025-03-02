@@ -85,8 +85,6 @@ The dynamic sampling system comprises five main components:
 
 The system operates in a feedback loop, with each generated paragraph analyzed to inform parameter adjustments for subsequent generation.
 
-![System Architecture](https://i.imgur.com/gKIQHvF.png)
-
 ### 3.2 Working Memory Implementation
 
 The `WorkingMemory` class implements a capacity-limited memory store with the following key features:
