@@ -492,3 +492,66 @@ The meta-cognitive controller primarily remained in "neutral" state across gener
 5. **Technical Documentation**: Complex explanations that transition from concepts to applications
 
 The dynamic sampling approach appears to represent a significant advancement in LLM text generation, addressing key limitations of static parameter settings while mimicking aspects of human cognitive flexibility. By enabling models to adapt their "cognitive state" based on content and goals, this system paves the way for more natural, coherent, and contextually appropriate text generation.
+
+# Cogni-Flow Installation Instructions
+
+These instructions will help you set up Cogni-Flow to implement dynamic parameter sampling with meta-cognitive control for LLMs.
+
+## Prerequisites
+
+- Python 3.8 or higher
+- [Ollama](https://ollama.ai/) installed and running locally (or accessible via URL)
+- Access to a language model through Ollama (e.g., Phi-4, Llama3, etc.)
+
+## Installation Steps
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/yourusername/cogni-flow.git
+cd cogni-flow
+```
+
+2. **Create and activate a virtual environment (optional but recommended):**
+
+```bash
+# Using venv
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
+```
+
+## Configuration
+
+By default, Cogni-Flow connects to Ollama running on `http://localhost:11434`. To customize:
+
+- Set the `ollama_base_url` parameter when initializing the system
+- Choose your preferred model by setting the `model` parameter (must be available in your Ollama instance)
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. **Ollama connection error**:
+   - Ensure Ollama is running (`ollama serve`)
+   - Verify the correct URL is specified in `ollama_base_url`
+
+2. **Model not found**:
+   - List available models in Ollama: `ollama list`
+   - Pull a supported model: `ollama pull phi4:latest`
+
+3. **Dependency errors**:
+   - Make sure you're using a supported Python version
+   - Try installing dependencies individually if the requirements installation fails
+
+## Using Specific Models
+
+Cogni-Flow has been tested with the following models:
+- Phi-4
+- Llama3
+- Mistral
+- Qwen
+
+For best results with longer text generation, we recommend models with at least 8B parameters. You'll need sufficient RAM and possibly GPU resources for larger models.
