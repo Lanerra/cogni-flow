@@ -1,5 +1,5 @@
 # Cogni-Flow
-## Dynamic Sampling for LLMs: A Meta-Cognitive Approach with Working Memory
+Dynamic Sampling for LLMs: A Meta-Cognitive Approach with Working Memory
 
 ## Executive Summary
 
