@@ -8,52 +8,122 @@ adjustment based on generated content.
 
 import re
 import time
+from sentence_transformers import SentenceTransformer
 import numpy as np
 from typing import Dict, List, Optional, Union, Tuple, Any
+import torch
 from collections import deque
 import requests
 from transformers import pipeline
+from sklearn.metrics.pairwise import cosine_similarity
 
 class WorkingMemory:
-    """Simulates limited capacity working memory with attention mechanisms."""
+    """Simulates limited capacity working memory with embedding-based similarity detection."""
     
-    def __init__(self, capacity: int = 5):
-        """Initialize working memory with specified capacity."""
+    def __init__(self, capacity: int = 5, embedding_model: str = "all-MiniLM-L6-v2"):
+        """Initialize working memory with specified capacity and embedding model."""
         self.capacity = capacity
         self.elements = []  # Content elements (key concepts, entities, themes)
+        self.embeddings = []  # Embeddings for each element
         self.importance = []  # Salience scores for each element
         self.recency = []  # Recency counters for each element (lower = more recent)
+        
+        # Initialize embedding model
+        try:
+            self.embedding_model = SentenceTransformer(embedding_model)
+            print(f"Initialized embedding model: {embedding_model}")
+            self.use_embeddings = True
+        except Exception as e:
+            print(f"Error loading embedding model: {e}. Falling back to text-based similarity.")
+            self.embedding_model = None
+            self.use_embeddings = False
+    
+    def _get_element_text(self, element: Dict) -> str:
+        """Extract a textual representation of an element for embedding."""
+        if "content" in element and element["content"]:
+            return element["content"]
+        elif "name" in element and element["name"]:
+            return element["name"]
+        else:
+            # Create a text representation from all non-empty values
+            return " ".join(str(v) for k, v in element.items() 
+                           if v and k not in ["type", "importance", "activation"])
+    
+    def _generate_embedding(self, element: Dict) -> np.ndarray:
+        """Generate an embedding for a memory element."""
+        if not self.use_embeddings:
+            # Return a dummy embedding if model isn't available
+            return np.zeros(384)  # Default dimension for MiniLM
+            
+        # Get text representation
+        text = self._get_element_text(element)
+            
+        if not text:
+            return np.zeros(384)  # Default embedding dimension
+            
+        # Generate embedding
+        try:
+            with torch.no_grad():
+                embedding = self.embedding_model.encode(text, convert_to_numpy=True)
+            return embedding
+        except Exception as e:
+            print(f"Error generating embedding: {e}")
+            return np.zeros(384)  # Return dummy embedding on error
         
     def update(self, new_elements: List[Dict], max_age: int = 10):
         """
         Update working memory with new elements, maintaining limited capacity.
-        
-        Args:
-            new_elements: List of new elements to potentially add to memory
-            max_age: Maximum age before elements are automatically removed
+        Uses embedding-based similarity to detect duplicates.
         """
         # Age existing elements
         self.recency = [r + 1 for r in self.recency]
         
         # Remove elements that exceed maximum age
-        current_elements = [(e, i, r) for e, i, r in zip(self.elements, self.importance, self.recency) if r < max_age]
-        if current_elements:
-            self.elements, self.importance, self.recency = zip(*current_elements)
-            self.elements, self.importance, self.recency = list(self.elements), list(self.importance), list(self.recency)
+        current_indices = [i for i, r in enumerate(self.recency) if r < max_age]
+        if current_indices:
+            self.elements = [self.elements[i] for i in current_indices]
+            self.embeddings = [self.embeddings[i] for i in current_indices] if self.embeddings else []
+            self.importance = [self.importance[i] for i in current_indices]
+            self.recency = [self.recency[i] for i in current_indices]
         else:
-            self.elements, self.importance, self.recency = [], [], []
+            self.elements, self.embeddings, self.importance, self.recency = [], [], [], []
             
         # Add new elements
         for element in new_elements:
-            # If element already exists, update its importance and reset recency
-            for idx, existing in enumerate(self.elements):
-                if self._similarity(element, existing) > 0.8:  # Threshold for considering elements similar
-                    self.importance[idx] = max(self.importance[idx], element.get("importance", 0.5))
-                    self.recency[idx] = 0
-                    break
-            else:
+            # Generate embedding for new element if using embeddings
+            if self.use_embeddings:
+                new_embedding = self._generate_embedding(element)
+            
+            # Check if element already exists using embedding or text similarity
+            found_similar = False
+            
+            # Only try to find similar items if we have existing elements
+            if self.elements:
+                for idx, existing in enumerate(self.elements):
+                    # Calculate similarity
+                    if self.use_embeddings and self.embeddings:
+                        similarity = cosine_similarity(
+                            new_embedding.reshape(1, -1), 
+                            self.embeddings[idx].reshape(1, -1)
+                        )[0][0]
+                    else:
+                        # Fallback to text similarity
+                        similarity = self._text_similarity(element, existing)
+                    
+                    if similarity > 0.8:  # Threshold for considering elements similar
+                        # Update importance and reset recency for existing element
+                        self.importance[idx] = max(self.importance[idx], element.get("importance", 0.5))
+                        self.recency[idx] = 0
+                        found_similar = True
+                        break
+            
+            if not found_similar:
                 # Element doesn't exist, add it
                 self.elements.append(element)
+                if self.use_embeddings:
+                    self.embeddings.append(new_embedding)
+                else:
+                    self.embeddings.append(np.zeros(384))  # Placeholder for consistency
                 self.importance.append(element.get("importance", 0.5))
                 self.recency.append(0)
         
@@ -65,19 +135,13 @@ class WorkingMemory:
             # Keep only the top elements
             indices = np.argsort(activation)[-self.capacity:]
             self.elements = [self.elements[i] for i in indices]
+            self.embeddings = [self.embeddings[i] for i in indices] if self.embeddings else []
             self.importance = [self.importance[i] for i in indices]
             self.recency = [self.recency[i] for i in indices]
     
     def get_active_elements(self, context: Dict = None, threshold: float = 0.0) -> List[Dict]:
         """
         Retrieve currently active elements, optionally filtered by relevance to context.
-        
-        Args:
-            context: Optional context to filter elements by relevance
-            threshold: Minimum activation threshold to include an element
-            
-        Returns:
-            List of active elements with their activation scores
         """
         if not self.elements:
             return []
@@ -87,7 +151,27 @@ class WorkingMemory:
         
         # If context provided, adjust activation by relevance
         if context:
-            context_relevance = [self._contextual_relevance(e, context) for e in self.elements]
+            if self.use_embeddings:
+                # Generate embedding for context
+                context_text = self._get_element_text(context)
+                if context_text:
+                    context_embedding = self._generate_embedding({"content": context_text})
+                    # Calculate relevance using embeddings
+                    context_relevance = []
+                    for existing_embedding in self.embeddings:
+                        similarity = cosine_similarity(
+                            context_embedding.reshape(1, -1), 
+                            existing_embedding.reshape(1, -1)
+                        )[0][0]
+                        context_relevance.append(float(similarity))
+                else:
+                    # Fallback to attribute matching
+                    context_relevance = [self._contextual_relevance(e, context) for e in self.elements]
+            else:
+                # No embedding model, use attribute matching
+                context_relevance = [self._contextual_relevance(e, context) for e in self.elements]
+                
+            # Adjust activation by relevance
             activation = [a * r for a, r in zip(activation, context_relevance)]
         
         # Filter by threshold and create result
@@ -100,11 +184,8 @@ class WorkingMemory:
                 
         return sorted(result, key=lambda x: x["activation"], reverse=True)
     
-    def _similarity(self, elem1: Dict, elem2: Dict) -> float:
-        """Calculate similarity between two memory elements (simplified)."""
-        # This would be more sophisticated in a real implementation
-        # Could use embedding similarity, key overlap, etc.
-        
+    def _text_similarity(self, elem1: Dict, elem2: Dict) -> float:
+        """Legacy text-based similarity as fallback."""
         # Check for type match
         if elem1.get("type") != elem2.get("type"):
             return 0.0
@@ -336,6 +417,7 @@ class EnhancedMetaCognitiveSystem:
         model: str = "phi4:latest",
         ollama_base_url: str = "http://localhost:11434",
         sentiment_model: str = "distilbert-base-uncased-finetuned-sst-2-english",
+        embedding_model: str = "all-MiniLM-L6-v2"
     ):
         """Initialize the enhanced meta-cognitive system."""
         # Model configuration
@@ -343,12 +425,20 @@ class EnhancedMetaCognitiveSystem:
         self.ollama_base_url = ollama_base_url
         self.api_url = f"{ollama_base_url}/api/generate"
         
-        # Component initialization
-        self.working_memory = WorkingMemory(capacity=7)  # ~7 items, human working memory capacity
+        # Component initialization - now with embedding model
+        self.working_memory = WorkingMemory(capacity=7, embedding_model=embedding_model)
         self.meta_cognitive = MetaCognitiveController()
         
-        # Content analyzers
-        self.sentiment_analyzer = pipeline("sentiment-analysis", model=sentiment_model)
+        # Content analyzers with fallback mechanism
+        try:
+            from transformers import pipeline
+            self.sentiment_analyzer = pipeline("sentiment-analysis", model=sentiment_model)
+            print(f"Initialized sentiment analyzer: {sentiment_model}")
+            self.use_pipeline_sentiment = True
+        except Exception as e:
+            print(f"Error loading sentiment model: {e}. Using fallback sentiment analysis.")
+            self.sentiment_analyzer = None
+            self.use_pipeline_sentiment = False
         
         # Base parameters
         self.current_params = {
@@ -680,14 +770,10 @@ class EnhancedMetaCognitiveSystem:
             return ""
     
     def _extract_memory_elements(self, paragraph: str, analysis: Dict) -> List[Dict]:
-        """
-        Extract key concepts, entities, and themes from paragraph to store in working memory.
-        
-        In a full implementation, this would use more sophisticated NLP techniques.
-        """
+        """Extract key concepts, entities, and themes from paragraph to store in working memory."""
         elements = []
-        
-        # Extract emotion as memory element
+    
+        # Extract emotion
         if "emotionality" in analysis and "dominant_emotion" in analysis["emotionality"]:
             emotion = analysis["emotionality"]["dominant_emotion"]
             if emotion != "neutral":
@@ -696,8 +782,8 @@ class EnhancedMetaCognitiveSystem:
                     "name": emotion,
                     "content": f"The text conveys {emotion}",
                     "importance": analysis["emotionality"].get("score", 0.5)
-                })
-        
+               })
+    
         # Extract sentiment
         if "sentiment" in analysis and "label" in analysis["sentiment"]:
             sentiment = analysis["sentiment"]["label"]
@@ -707,7 +793,7 @@ class EnhancedMetaCognitiveSystem:
                 "content": f"The tone is {sentiment.lower()}",
                 "importance": analysis["sentiment"].get("score", 0.5)
             })
-        
+    
         # Extract narrative tension
         if "tension" in analysis and "score" in analysis["tension"]:
             tension_score = analysis["tension"]["score"]
@@ -718,41 +804,49 @@ class EnhancedMetaCognitiveSystem:
                     "content": "The narrative has building tension",
                     "importance": tension_score
                 })
-        
-        # Extract simple entities (very simplified - would use NER in full implementation)
-        # Look for capitalized words that might be names/places
+    
+        # More sophisticated entity extraction
+        import re
         possible_entities = re.findall(r'\b[A-Z][a-z]+\b', paragraph)
-        for entity in set(possible_entities):
-            if len(entity) > 3:  # Filter out short words
-                elements.append({
+        unique_entities = set()
+        for entity in possible_entities:
+            if len(entity) > 3 and entity not in unique_entities:
+                unique_entities.add(entity)
+            elements.append({
                     "type": "entity",
                     "name": entity,
                     "content": f"Entity: {entity}",
-                    "importance": 0.6  # Medium importance
+                    "importance": 0.6
                 })
-        
-        # Extract key theme (simplified)
-        # In a real implementation, would use topic modeling or keyword extraction
-        words = paragraph.lower().split()
-        # Remove stop words (simplified)
-        stop_words = {"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "with", "by", "of"}
+    
+        # Enhanced theme extraction
+        from collections import Counter
+        import string
+    
+        # Clean text and remove punctuation
+        translator = str.maketrans('', '', string.punctuation)
+        clean_text = paragraph.translate(translator).lower()
+        words = clean_text.split()
+    
+        # Expanded stop words list
+        stop_words = {"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "with", "by", "of",
+                     "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does",
+                     "did", "i", "you", "he", "she", "it", "we", "they", "this", "that", "these", "those"}
         content_words = [w for w in words if w not in stop_words and len(w) > 3]
-        
-        # Get most frequent content words
+    
         if content_words:
-            from collections import Counter
             word_counts = Counter(content_words)
-            top_words = word_counts.most_common(2)
-            
+            top_words = word_counts.most_common(3)  # Increased from 2 to 3
+        
             if top_words:
                 theme_words = [word for word, _ in top_words]
                 elements.append({
                     "type": "theme",
                     "name": "_".join(theme_words),
                     "content": f"Theme: {' '.join(theme_words)}",
-                    "importance": 0.7  # High importance
+                    "importance": 0.7
                 })
-        
+    
         return elements
     
     def _apply_metacognitive_adjustments(self, evaluation: Dict):
