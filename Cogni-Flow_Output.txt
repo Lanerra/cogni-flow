@@ -1,0 +1,735 @@
+Initialized embedding model: all-MiniLM-L6-v2
+Device set to use cuda:0
+Initialized sentiment analyzer: distilbert-base-uncased-finetuned-sst-2-english
+
+=== Generating narrative content ===
+Starting generation with model: phi4:latest
+Narrative style: building_tension
+Initial parameters: {'temperature': 0.7, 'top_p': 0.9, 'top_k': 40, 'frequency_penalty': 0.0, 'presence_penalty': 0.0}
+
+Generating paragraph 1...
+Applying introduction profile with weight 0.3
+Analyzing paragraph 1...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9997504353523254}, 'complexity': {'score': np.float64(0.7128183360557668), 'label': 'HIGH', 'details': {'avg_word_length': 5.071428571428571, 'vocabulary_richness': 0.8333333333333334, 'avg_sentence_length': 28.0}}, 'creativity': {'score': 0.38545454545454544, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 3, 'unusual_words': 0.9272727272727272, 'descriptors': 1}}, 'formality': {'score': 0.3845238095238095, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.3095238095238095, 'label': 'SOME_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.875431779622422), 'content_quality': np.float64(0.7444543912169604), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.03737046611327339), 'top_p': np.float64(-0.012456822037757798), 'top_k': np.float64(-1.2456822037757798), 'frequency_penalty': np.float64(-0.012456822037757798)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7128183360557668
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7128183360557668)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(32.51407955141629), 'frequency_penalty': 0.0, 'presence_penalty': 0.0}
+
+Generating paragraph 2...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 2...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9998319149017334}, 'complexity': {'score': np.float64(0.6508254862024194), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.521739130434782, 'vocabulary_richness': 0.8478260869565217, 'avg_sentence_length': 23.0}}, 'creativity': {'score': 0.5239705882352941, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 5, 'unusual_words': 0.8823529411764706, 'descriptors': 2}}, 'formality': {'score': 0.19202898550724634, 'label': 'INFORMAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.027173913043478264, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8615944596514412), 'content_quality': np.float64(0.7571892196799335), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04152166210456763), 'top_p': np.float64(-0.01384055403485588), 'top_k': np.float64(-1.3840554034855879), 'frequency_penalty': np.float64(-0.01384055403485588)}}
+Applying positive profile with weight 0.9
+Applying creative profile with weight 0.5239705882352941
+Applying informal profile with weight 0.8079710144927537
+Applying neutral_emotion profile with weight 0.9728260869565217
+Applied profiles: [('positive', 0.9), ('creative', 0.5239705882352941), ('informal', 0.8079710144927537), ('neutral_emotion', 0.9728260869565217)]
+Adjusted parameters: {'temperature': np.float64(0.6083812877340498), 'top_p': np.float64(0.8519393916219933), 'top_k': np.float64(57.31729358345274), 'frequency_penalty': np.float64(0.17235812049180083), 'presence_penalty': 0.0023151264641017096}
+
+Generating paragraph 3...
+Applying introduction profile with weight 0.3
+Analyzing paragraph 3...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9916056394577026}, 'complexity': {'score': np.float64(0.7735860215822679), 'label': 'HIGH', 'details': {'avg_word_length': 5.264462809917355, 'vocabulary_richness': 0.8016528925619835, 'avg_sentence_length': 24.2}}, 'creativity': {'score': 0.5455714573674664, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 5, 'unusual_words': 0.9146341463414634, 'descriptors': 1}}, 'formality': {'score': 0.00922865013774099, 'label': 'INFORMAL'}, 'tension': {'score': 0.12958677685950415, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.004132231404958678, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.06611570247933884, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anticipation', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 1, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8576362500972772), 'content_quality': np.float64(0.6236282497339989), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.042709124970816845), 'top_p': np.float64(-0.014236374990272284), 'top_k': np.float64(-1.4236374990272282), 'frequency_penalty': np.float64(-0.014236374990272284)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7735860215822679
+Applying creative profile with weight 0.5455714573674664
+Applying informal profile with weight 0.990771349862259
+Applying neutral_emotion profile with weight 0.9338842975206612
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7735860215822679)), ('creative', 0.5455714573674664), ('informal', 0.990771349862259), ('neutral_emotion', 0.9338842975206612)]
+Adjusted parameters: {'temperature': np.float64(0.619804925287623), 'top_p': np.float64(0.8546107931962181), 'top_k': np.float64(49.163144376750736), 'frequency_penalty': np.float64(0.15057964852589087), 'presence_penalty': 0.00330920762929566}
+
+Generating paragraph 4...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 4...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9995025396347046}, 'complexity': {'score': np.float64(0.6478197408040818), 'label': 'MEDIUM', 'details': {'avg_word_length': 4.958762886597938, 'vocabulary_richness': 0.8144329896907216, 'avg_sentence_length': 24.25}}, 'creativity': {'score': 0.495625, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 3, 'unusual_words': 0.890625, 'descriptors': 2}}, 'formality': {'score': 0.3826460481099656, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8526388147989796), 'content_quality': np.float64(0.7743677591959182), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04420835556030611), 'top_p': np.float64(-0.014736118520102037), 'top_k': np.float64(-1.4736118520102037), 'frequency_penalty': np.float64(-0.014736118520102037)}}
+Applying positive profile with weight 0.9
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(57.685267690149125), 'frequency_penalty': np.float64(0.25019235505498216), 'presence_penalty': 0.0}
+
+Generating paragraph 5...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 5...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9951674938201904}, 'complexity': {'score': np.float64(0.7359960970118379), 'label': 'HIGH', 'details': {'avg_word_length': 5.081081081081081, 'vocabulary_richness': 0.8648648648648649, 'avg_sentence_length': 24.666666666666668}}, 'creativity': {'score': 0.46249999999999997, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 3, 'unusual_words': 0.8125, 'descriptors': 1}}, 'formality': {'score': 0.28468468468468466, 'label': 'INFORMAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.006756756756756757, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.07432432432432431, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anticipation', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 1, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8674570568281215), 'content_quality': np.float64(0.7027539029881621), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.039762882951563557), 'top_p': np.float64(-0.013254294317187854), 'top_k': np.float64(-1.3254294317187854), 'frequency_penalty': np.float64(-0.013254294317187854)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7359960970118379
+Applying informal profile with weight 0.7153153153153153
+Applying neutral_emotion profile with weight 0.9256756756756757
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7359960970118379)), ('informal', 0.7153153153153153), ('neutral_emotion', 0.9256756756756757)]
+Adjusted parameters: {'temperature': np.float64(0.6153543162008103), 'top_p': np.float64(0.8532335032520664), 'top_k': np.float64(37.76290556249926), 'frequency_penalty': np.float64(0.18285771509080587), 'presence_penalty': 0.010698685171658147}
+
+Generating paragraph 6...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 6...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9985912442207336}, 'complexity': {'score': np.float64(0.6685570065571667), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.384615384615385, 'vocabulary_richness': 0.8717948717948718, 'avg_sentence_length': 19.5}}, 'creativity': {'score': 0.4245454545454545, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 3, 'unusual_words': 0.8727272727272727, 'descriptors': 1}}, 'formality': {'score': 0.18974358974358974, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.01282051282051282, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8652243847243447), 'content_quality': np.float64(0.7891702661701061), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04043268458269659), 'top_p': np.float64(-0.01347756152756553), 'top_k': np.float64(-1.347756152756553), 'frequency_penalty': np.float64(-0.01347756152756553)}}
+Applying positive profile with weight 0.9
+Applying informal profile with weight 0.8102564102564103
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('informal', 0.8102564102564103), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(55.417805497224194), 'frequency_penalty': np.float64(0.1700563072833022), 'presence_penalty': 0.0}
+
+Generating paragraph 7...
+Applying introduction profile with weight 0.3
+Analyzing paragraph 7...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9992778897285461}, 'complexity': {'score': np.float64(0.6556035573854299), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.051282051282051, 'vocabulary_richness': 0.8333333333333334, 'avg_sentence_length': 26.0}}, 'creativity': {'score': 0.4937254901960785, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 5, 'unusual_words': 0.9019607843137255, 'descriptors': 1}}, 'formality': {'score': 0.48418803418803424, 'label': 'NEUTRAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.00641025641025641, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.07051282051282051, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anticipation', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 1, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8787959432328281), 'content_quality': np.float64(0.7675336975165309), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.036361217030151584), 'top_p': np.float64(-0.012120405676717195), 'top_k': np.float64(-1.2120405676717194), 'frequency_penalty': np.float64(-0.012120405676717195)}}
+Applying positive profile with weight 0.9
+Applying neutral_emotion profile with weight 0.9294871794871795
+Applied profiles: [('positive', 0.9), ('neutral_emotion', 0.9294871794871795)]
+Adjusted parameters: {'temperature': np.float64(0.609288476891924), 'top_p': np.float64(0.8531963730088087), 'top_k': np.float64(55.296601440457025), 'frequency_penalty': np.float64(0.10836181542410502), 'presence_penalty': 0.0}
+
+Generating paragraph 8...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 8...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9984209537506104}, 'complexity': {'score': np.float64(0.7690886631459963), 'label': 'HIGH', 'details': {'avg_word_length': 4.987179487179487, 'vocabulary_richness': 0.8589743589743589, 'avg_sentence_length': 26.0}}, 'creativity': {'score': 0.5221428571428572, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 4, 'unusual_words': 0.9107142857142857, 'descriptors': 1}}, 'formality': {'score': 0.2831196581196581, 'label': 'INFORMAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.00641025641025641, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.032051282051282055, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7812049404406072), 'content_quality': np.float64(0.699839908282575), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.06563851786781784), 'top_p': np.float64(-0.021879505955939283), 'top_k': np.float64(-2.1879505955939282), 'frequency_penalty': np.float64(-0.021879505955939283)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7690886631459963
+Applying creative profile with weight 0.5221428571428572
+Applying informal profile with weight 0.7168803418803419
+Applying neutral_emotion profile with weight 0.967948717948718
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7690886631459963)), ('creative', 0.5221428571428572), ('informal', 0.7168803418803419), ('neutral_emotion', 0.967948717948718)]
+Adjusted parameters: {'temperature': np.float64(0.6091000414023178), 'top_p': np.float64(0.8519667441893195), 'top_k': np.float64(48.84662516710394), 'frequency_penalty': np.float64(0.18502769246395265), 'presence_penalty': 0.0032704292680254213}
+
+Generating paragraph 9...
+Applying development profile with weight 0.3
+Analyzing paragraph 9...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9968774318695068}, 'complexity': {'score': np.float64(0.7639563678188928), 'label': 'HIGH', 'details': {'avg_word_length': 5.341772151898734, 'vocabulary_richness': 0.8607594936708861, 'avg_sentence_length': 26.333333333333332}}, 'creativity': {'score': 0.5030769230769232, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 3, 'unusual_words': 0.8653846153846154, 'descriptors': 2}}, 'formality': {'score': 0.08902953586497891, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.006329113924050633, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.07594936708860758, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anticipation', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 2, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7882290190481979), 'content_quality': np.float64(0.7145051706426456), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.06353129428554063), 'top_p': np.float64(-0.021177098095180216), 'top_k': np.float64(-2.117709809518021), 'frequency_penalty': np.float64(-0.021177098095180216)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7639563678188928
+Applying creative profile with weight 0.5030769230769232
+Applying informal profile with weight 0.9109704641350211
+Applying neutral_emotion profile with weight 0.9240506329113924
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7639563678188928)), ('creative', 0.5030769230769232), ('informal', 0.9109704641350211), ('neutral_emotion', 0.9240506329113924)]
+Adjusted parameters: {'temperature': np.float64(0.6223056695961209), 'top_p': np.float64(0.8550903206252597), 'top_k': np.float64(47.278092753117676), 'frequency_penalty': np.float64(0.15635201132071347), 'presence_penalty': 0.0038105377375866147}
+
+Generating paragraph 10...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 10...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.997075080871582}, 'complexity': {'score': np.float64(0.6643408089605236), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.123076923076923, 'vocabulary_richness': 0.8769230769230769, 'avg_sentence_length': 21.666666666666668}}, 'creativity': {'score': 0.37734693877551023, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 2, 'unusual_words': 0.8367346938775511, 'descriptors': 1}}, 'formality': {'score': 0.08538461538461539, 'label': 'INFORMAL'}, 'tension': {'score': 0.12000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007692307692307693, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.038461538461538464, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8238669170691313), 'content_quality': np.float64(0.7943326604272315), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.05283992487926061), 'top_p': np.float64(-0.017613308293086872), 'top_k': np.float64(-1.7613308293086871), 'frequency_penalty': np.float64(-0.017613308293086872)}}
+Applying positive profile with weight 0.9
+Applying informal profile with weight 0.9146153846153846
+Applying neutral_emotion profile with weight 0.9615384615384616
+Applied profiles: [('positive', 0.9), ('informal', 0.9146153846153846), ('neutral_emotion', 0.9615384615384616)]
+Adjusted parameters: {'temperature': np.float64(0.6111189659030801), 'top_p': np.float64(0.8526321092816155), 'top_k': np.float64(57.279485467692666), 'frequency_penalty': np.float64(0.15896490559034057), 'presence_penalty': 0.0030093075129519037}
+
+Generating paragraph 11...
+Applying development profile with weight 0.3
+Analyzing paragraph 11...
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.987234890460968}, 'complexity': {'score': np.float64(0.6477637971539453), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.233766233766234, 'vocabulary_richness': 0.8571428571428571, 'avg_sentence_length': 25.666666666666668}}, 'creativity': {'score': 0.43025641025641026, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 3, 'unusual_words': 0.8846153846153846, 'descriptors': 0}}, 'formality': {'score': 0.2872294372294373, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.012987012987012988, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8016231532756162), 'content_quality': np.float64(0.8373644079742599), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.059513054017315145), 'top_p': np.float64(-0.019837684672438384), 'top_k': np.float64(-1.9837684672438383), 'frequency_penalty': np.float64(-0.019837684672438384)}}
+Applying positive profile with weight 0.9
+Applying informal profile with weight 0.7127705627705627
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('informal', 0.7127705627705627), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(57.08110862096828), 'frequency_penalty': np.float64(0.14260106354939878), 'presence_penalty': 0.0}
+
+Generating paragraph 12...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 12...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9965399503707886}, 'complexity': {'score': np.float64(0.7596186569218825), 'label': 'HIGH', 'details': {'avg_word_length': 5.28169014084507, 'vocabulary_richness': 0.9154929577464789, 'avg_sentence_length': 23.666666666666668}}, 'creativity': {'score': 0.43583333333333335, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 4, 'unusual_words': 0.8125, 'descriptors': 1}}, 'formality': {'score': 0.5880281690140845, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7750536691028627), 'content_quality': np.float64(0.7282980097447842), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.0674838992691412), 'top_p': np.float64(-0.022494633089713736), 'top_k': np.float64(-2.2494633089713734), 'frequency_penalty': np.float64(-0.022494633089713736)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7596186569218825
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7596186569218825)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(37.01703798520382), 'frequency_penalty': np.float64(0.2494522817516562), 'presence_penalty': 0.0}
+
+Generating paragraph 13...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 13...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.99953293800354}, 'complexity': {'score': np.float64(0.7533822473702041), 'label': 'HIGH', 'details': {'avg_word_length': 5.303030303030303, 'vocabulary_richness': 0.8787878787878788, 'avg_sentence_length': 33.0}}, 'creativity': {'score': 0.36021276595744683, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 1, 'unusual_words': 0.851063829787234, 'descriptors': 0}}, 'formality': {'score': 0.3883838383838384, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7577076296468107), 'content_quality': np.float64(0.6967241356085193), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.07268771110595679), 'top_p': np.float64(-0.02422923703531893), 'top_k': np.float64(-2.422923703531893), 'frequency_penalty': np.float64(-0.02422923703531893)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7533822473702041
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7533822473702041)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(36.20517769086503), 'frequency_penalty': np.float64(0.26350064010550006), 'presence_penalty': 0.0}
+
+Generating paragraph 14...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 14...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9981892704963684}, 'complexity': {'score': 0.7590401785714285, 'label': 'HIGH', 'details': {'avg_word_length': 5.089285714285714, 'vocabulary_richness': 0.9107142857142857, 'avg_sentence_length': 28.0}}, 'creativity': {'score': 0.4, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 2, 'unusual_words': 0.85, 'descriptors': 0}}, 'formality': {'score': 0.28482142857142856, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.008928571428571428, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': 0.7662399553571428, 'content_quality': 0.7109598214285715, 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': -0.07012801339285714, 'top_p': -0.023376004464285716, 'top_k': -2.3376004464285716, 'frequency_penalty': -0.023376004464285716}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7590401785714285
+Applying informal profile with weight 0.7151785714285714
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', 0.7590401785714285), ('informal', 0.7151785714285714), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(36.025748637336115), 'frequency_penalty': np.float64(0.18307543671632373), 'presence_penalty': 0.0}
+
+Generating paragraph 15...
+Applying development profile with weight 0.3
+Analyzing paragraph 15...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9997113347053528}, 'complexity': {'score': np.float64(0.7307783018867924), 'label': 'HIGH', 'details': {'avg_word_length': 5.754716981132075, 'vocabulary_richness': 0.9433962264150944, 'avg_sentence_length': 26.5}}, 'creativity': {'score': 0.37000000000000005, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 2, 'unusual_words': 0.9, 'descriptors': 2}}, 'formality': {'score': 0.2959119496855346, 'label': 'INFORMAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.009433962264150943, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.04716981132075472, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7875978773584906), 'content_quality': np.float64(0.7242216981132077), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.06372063679245281), 'top_p': np.float64(-0.02124021226415094), 'top_k': np.float64(-2.1240212264150937), 'frequency_penalty': np.float64(-0.02124021226415094)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7307783018867924
+Applying informal profile with weight 0.7040880503144654
+Applying neutral_emotion profile with weight 0.9528301886792453
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7307783018867924)), ('informal', 0.7040880503144654), ('neutral_emotion', 0.9528301886792453)]
+Adjusted parameters: {'temperature': np.float64(0.6094397927713396), 'top_p': np.float64(0.8519818413871858), 'top_k': np.float64(31.56507902040658), 'frequency_penalty': np.float64(0.14712130718148203), 'presence_penalty': 0.001660585024326569}
+
+Generating paragraph 16...
+Applying development profile with weight 0.3
+Analyzing paragraph 16...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.997847318649292}, 'complexity': {'score': np.float64(0.656024581911572), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.283783783783784, 'vocabulary_richness': 0.918918918918919, 'avg_sentence_length': 18.5}}, 'creativity': {'score': 0.39391304347826084, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 3, 'unusual_words': 0.8695652173913043, 'descriptors': 0}}, 'formality': {'score': 0.0, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.013513513513513514, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.040540540540540536, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anticipation', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 1, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8006072505268074), 'content_quality': np.float64(0.8109319398275585), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.05981782484195779), 'top_p': np.float64(-0.019939274947319265), 'top_k': np.float64(-1.9939274947319263), 'frequency_penalty': np.float64(-0.019939274947319265)}}
+Applying positive profile with weight 0.9
+Applying informal profile with weight 1.0
+Applying neutral_emotion profile with weight 0.9594594594594594
+Applied profiles: [('positive', 0.9), ('informal', 1.0), ('neutral_emotion', 0.9594594594594594)]
+Adjusted parameters: {'temperature': np.float64(0.6121621621621622), 'top_p': np.float64(0.8528378378378378), 'top_k': np.float64(31.365686270933384), 'frequency_penalty': np.float64(0.15), 'presence_penalty': 0.0020270270270270284}
+
+Generating paragraph 17...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 17...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9976008534431458}, 'complexity': {'score': np.float64(0.7380506693340475), 'label': 'HIGH', 'details': {'avg_word_length': 5.5, 'vocabulary_richness': 0.875, 'avg_sentence_length': 26.666666666666668}}, 'creativity': {'score': 0.4719298245614035, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 6, 'unusual_words': 0.8596491228070176, 'descriptors': 0}}, 'formality': {'score': 0.4916666666666667, 'label': 'NEUTRAL'}, 'tension': {'score': 0.11500000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0125, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.06875, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'trust', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 1}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8294423765261372), 'content_quality': np.float64(0.7559844183852508), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.051167287042158845), 'top_p': np.float64(-0.017055762347386285), 'top_k': np.float64(-1.7055762347386283), 'frequency_penalty': np.float64(-0.017055762347386285)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7380506693340475
+Applying neutral_emotion profile with weight 0.93125
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7380506693340475)), ('neutral_emotion', 0.93125)]
+Adjusted parameters: {'temperature': np.float64(0.5980275580496784), 'top_p': np.float64(0.8483938569686078), 'top_k': np.float64(36.31365460158804), 'frequency_penalty': np.float64(0.25449812619936585), 'presence_penalty': 0.026152871621621613}
+
+Generating paragraph 18...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 18...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9950634837150574}, 'complexity': {'score': np.float64(0.6962226597265178), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.313432835820896, 'vocabulary_richness': 0.8955223880597015, 'avg_sentence_length': 22.333333333333332}}, 'creativity': {'score': 0.5008333333333334, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 6, 'unusual_words': 0.8541666666666666, 'descriptors': 1}}, 'formality': {'score': 0.38855721393034826, 'label': 'NEUTRAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.07462686567164178, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6963093848196144), 'content_quality': np.float64(0.7641940069401489), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.06073812303607713), 'presence_penalty': np.float64(0.030369061518038566)}}
+Applying positive profile with weight 0.9
+Applying creative profile with weight 0.5008333333333334
+Applying neutral_emotion profile with weight 0.9253731343283582
+Applied profiles: [('positive', 0.9), ('creative', 0.5008333333333334), ('neutral_emotion', 0.9253731343283582)]
+Adjusted parameters: {'temperature': np.float64(0.6254166753768824), 'top_p': np.float64(0.8557333912241628), 'top_k': np.float64(57.635313184391876), 'frequency_penalty': np.float64(0.293825177385899), 'presence_penalty': np.float64(0.01878335984791137)}
+
+Generating paragraph 19...
+Applying climax profile with weight 0.3
+Analyzing paragraph 19...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9985179305076599}, 'complexity': {'score': np.float64(0.5963722958326115), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.344262295081967, 'vocabulary_richness': 0.9180327868852459, 'avg_sentence_length': 20.333333333333332}}, 'creativity': {'score': 0.43279069767441863, 'label': 'MEDIUM', 'details': {'figurative': 2, 'sensory': 3, 'unusual_words': 0.813953488372093, 'descriptors': 0}}, 'formality': {'score': 0.28907103825136615, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.00819672131147541, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6737907483767576), 'content_quality': np.float64(0.8300230530045978), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.06524185032464849), 'presence_penalty': np.float64(0.032620925162324246)}}
+Applying positive profile with weight 0.9
+Applying informal profile with weight 0.7109289617486338
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('informal', 0.7109289617486338), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(57.635313184391876), 'frequency_penalty': np.float64(0.1834390509213106), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 20...
+Applying climax profile with weight 0.3
+Analyzing paragraph 20...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9998025298118591}, 'complexity': {'score': np.float64(0.6474812729988594), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.590163934426229, 'vocabulary_richness': 0.8688524590163934, 'avg_sentence_length': 20.333333333333332}}, 'creativity': {'score': 0.4172727272727273, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 4, 'unusual_words': 0.8863636363636364, 'descriptors': 1}}, 'formality': {'score': 0.2931693989071038, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.00819672131147541, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.658947863568467), 'content_quality': np.float64(0.7711550906375043), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.0682104272863066), 'presence_penalty': np.float64(0.0341052136431533)}}
+Applying positive profile with weight 0.9
+Applying informal profile with weight 0.7068306010928962
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('informal', 0.7068306010928962), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(57.635313184391876), 'frequency_penalty': np.float64(0.1612598555046438), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 21...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 21...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9994425177574158}, 'complexity': {'score': np.float64(0.6223713567388202), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.633333333333334, 'vocabulary_richness': 0.9, 'avg_sentence_length': 20.0}}, 'creativity': {'score': 0.3967441860465116, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 3, 'unusual_words': 0.8837209302325582, 'descriptors': 0}}, 'formality': {'score': 0.3938888888888889, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6600932073269229), 'content_quality': np.float64(0.7860007362844357), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.06798135853461543), 'presence_penalty': np.float64(0.033990679267307713)}}
+Applying positive profile with weight 0.9
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(59.52706263687837), 'frequency_penalty': np.float64(0.27457637977065014), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 22...
+Applying climax profile with weight 0.3
+Analyzing paragraph 22...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9935581088066101}, 'complexity': {'score': np.float64(0.654882678823361), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.73015873015873, 'vocabulary_richness': 0.9206349206349206, 'avg_sentence_length': 21.0}}, 'creativity': {'score': 0.435, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 4, 'unusual_words': 0.875, 'descriptors': 0}}, 'formality': {'score': 0.49550264550264556, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007936507936507936, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6615293302941597), 'content_quality': np.float64(0.772617321176639), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.06769413394116806), 'presence_penalty': np.float64(0.03384706697058403)}}
+Applying positive profile with weight 0.9
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(59.52706263687837), 'frequency_penalty': np.float64(0.2522034658394551), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 23...
+Applying climax profile with weight 0.3
+Analyzing paragraph 23...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9995416402816772}, 'complexity': {'score': np.float64(0.713369879781176), 'label': 'HIGH', 'details': {'avg_word_length': 5.2105263157894735, 'vocabulary_richness': 0.9298245614035088, 'avg_sentence_length': 19.0}}, 'creativity': {'score': 0.29585365853658535, 'label': 'LOW', 'details': {'figurative': 1, 'sensory': 0, 'unusual_words': 0.8292682926829268, 'descriptors': 1}}, 'formality': {'score': 0.3868421052631579, 'label': 'NEUTRAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.09649122807017543, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anticipation', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 1, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6462437517063963), 'content_quality': np.float64(0.6445569494871166), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.07075124965872075), 'presence_penalty': np.float64(0.03537562482936037)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.713369879781176
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 0.9035087719298246
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.713369879781176)), ('factual', 0.7), ('neutral_emotion', 0.9035087719298246)]
+Adjusted parameters: {'temperature': np.float64(0.5789114093268966), 'top_p': np.float64(0.8392341770252523), 'top_k': np.float64(25.53900365399516), 'frequency_penalty': np.float64(0.07096272782628557), 'presence_penalty': np.float64(0.0034134374835347718)}
+
+Generating paragraph 24...
+Applying resolution profile with weight 0.3
+Analyzing paragraph 24...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9998334646224976}, 'complexity': {'score': np.float64(0.5836154411535844), 'label': 'MEDIUM', 'details': {'avg_word_length': 4.65, 'vocabulary_richness': 0.8333333333333334, 'avg_sentence_length': 20.0}}, 'creativity': {'score': 0.44315789473684214, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 6, 'unusual_words': 0.8157894736842105, 'descriptors': 1}}, 'formality': {'score': 0.47750000000000004, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.008333333333333333, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.5651933339726066), 'content_quality': np.float64(0.8079635062148367), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.08696133320547868), 'presence_penalty': np.float64(0.04348066660273934)}}
+Applying positive profile with weight 0.9
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(25.53900365399516), 'frequency_penalty': np.float64(0.07967390947839989), 'presence_penalty': np.float64(0.0)}
+Detected conclusion, ending generation.
+
+Final narrative response:
+The grand ballroom was adorned in opulent splendor, its walls echoing the soft rustle of silk gowns and the gentle clinking of crystal goblets. Underneath the chandeliers' warm glow, guests mingled with a sense of restrained elegance, their laughter a delicate murmur that swirled through the air like whispered secrets. Among them was Elara, her mind as sharp as the diamond brooch pinned to her collar, who found herself drawn to the far corner where an enigmatic figure stood alone by the marble fireplace.
+
+The grand ballroom was adorned with such opulent splendor that it seemed like a living canvas of historical elegance. Intricate gold leaf patterns traced delicate arabesques across the ceiling, catching glimpses of light from crystal chandeliers that bathed every corner in an ethereal warmth. The marble floors shimmered beneath the feet of countless dancers, their movements fluid and graceful as they navigated through swirling clouds of silken fabric. Among this tapestry of beauty and grandeur stood Elara, her senses heightened by the intoxicating mix of scents and sounds that filled the air.
+
+As she moved closer to the solitary figure, a palpable excitement surged through Elara's veins, igniting an almost frenetic curiosity. The stranger appeared lost in thought, their gaze fixed on some distant horizon only they could see. Around them, the ballroom swirled with a kaleidoscope of color and motion; it was as if time itself had slowed to a languid waltz, each beat drawing Elara deeper into an emotional whirlpool. Her heart pounded like a frenetic drumbeat in her chest, urging her forward despite every instinct screaming caution. This mysterious presence seemed to be the epicenter of an unspoken drama unfolding within the grandeur of the ballroom, pulling at the threads of her composed exterior until they threatened to unravel completely.
+
+The rhythm of the music enveloped Elara like a fervent embrace, its tempo quickening as if it sought to match the racing beats within her chest. The room was alive with frenetic energy; couples whirled and spun in a dizzying display that blurred the lines between reality and fantasy. Each graceful turn of the dancers seemed amplified by an unseen force, pulling them deeper into an exuberant sea of movement. Elara felt herself swept up in this tide, her own feet tracing patterns upon the gleaming marble floor as if possessed by some invisible choreographer’s fervent hand.
+
+Elara's gaze was inexorably drawn to the enigmatic figure, their posture embodying a kind of silent magnetism that defied explanation. It felt as though she had entered an alternate dimension where only this moment mattered, each heartbeat reverberating with anticipation and allure. As her eyes locked onto those distant yet compelling depths, Elara’s breath caught in her throat; it was as if the very air around her pulsed with a life of its own.
+
+In that fleeting instant, Elara felt an inexplicable connection—a spark leaping across the space between them. It wasn't merely curiosity but something far more primal and profound, compelling her to reach out despite the cacophony enveloping their senses. The enigmatic figure seemed caught in a world of their own, yet Elara's presence was undeniable, like a beacon breaking through fog at sea. With each step forward, she felt an overwhelming need to pierce that silent bubble surrounding them.
+
+The music crescendoed around her, its notes weaving into the very fabric of her being as if it were a symphony composed solely for Elara's soul. The ballroom seemed to pulse with life, every corner echoing with whispers of past and future tales intermingled in this singular moment of time. Her senses heightened to an almost unbearable intensity; she could taste the sweetness of anticipation on her tongue, feel the electric charge of potential dancing across her skin.
+
+As Elara reached out, the world around them seemed to pause—each heartbeat resonating like a drumroll in this grand stage of endless possibility. The stranger's eyes fluttered open, meeting hers with an intensity that made time stand still for a heart-stopping moment. In that gaze, Elara found herself adrift on waves of emotion she could barely fathom; it was as if their very souls were singing in harmony amidst the chaos of sound and color swirling around them.
+
+Elara's hand trembled slightly as she reached toward the stranger, each movement imbued with an exhilarating mixture of trepidation and longing. The air seemed to shimmer with unspoken words, suspended between them like a delicate web waiting to be shattered by the slightest touch. Her mind raced, thoughts tumbling over one another in a whirlwind of anticipation; this was more than mere chance—it felt as though destiny had orchestrated their meeting amidst the splendor and chaos of the ballroom.
+
+With every inch her hand crept forward, Elara's emotions swelled to a crescendo that threatened to burst forth. The grandeur around them faded into a distant hum; all that existed was the space between them, vibrant with unspoken possibility. Her heart throbbed like an overture reaching its peak, each beat pulling her closer until she could almost feel their pulse mirrored against her own skin.
+
+The air crackled with an electric intensity as Elara's fingertips brushed against the stranger’s hand, a sensation that sent shivers racing down her spine. It was as if the universe had drawn them together in this singular moment, the weight of all possibilities pressing upon their joined hands like a tangible force. The ballroom faded into mere background noise—each note of music and flicker of light reduced to whispers compared to the symphony playing within Elara's heart.
+
+The connection surged through her veins with an electric intensity that left no room for doubt or hesitation. It was as though a crackle filled the air, unseen yet palpable—a whispering energy drawing them closer against all odds. The ballroom, once alive with endless possibilities and vibrant hues, now seemed to fade into nothingness compared to this singular point of convergence between two souls caught in the spellbinding embrace of fate.
+
+The entity stood before her like a beacon amidst an ocean of swirling energies; Elara’s senses flooded by waves of connection that washed over her in surges. In the presence of this enigmatic figure, she felt as though she had stepped into an ancient narrative written across time—each word resonating within her soul, binding them together with invisible threads woven from shared dreams and silent understandings.
+
+Elara's pulse quickened in harmony with the rhythm of their newfound connection—a symphony conducted by destiny’s unseen hand. The stranger stood before her like a statue carved from forgotten myths, each line on their face telling tales untold yet somehow familiar to Elara as if these stories were etched into the fabric of her own being.
+
+The ballroom's atmosphere seemed to pulse in tandem with Elara’s heart, its vibrant energy amplifying with every step she took towards the enigmatic figure. Around them, dancers continued their lively waltz, yet within this whirlwind of motion, a serene stillness enveloped Elara and her mysterious counterpart—a bubble that defied the chaos surrounding it.
+
+Elara's breath hitched as she felt an inexplicable warmth spreading through her fingertips. It was as if they were conduits for a profound connection, one that transcended words or gestures. The stranger’s eyes met hers once more, now softening with a recognition Elara couldn't quite place but somehow understood on a deeper level. In this fleeting exchange, there was an invitation—an unspoken promise of stories yet to be shared and mysteries waiting to unfold.
+
+Elara's heart seemed to leap into her throat as she felt the stranger's gaze hold hers with gentle assurance—a touchstone in the vast ocean of uncertainty that had swept through her mind moments before. This connection was an anchor, grounding her amidst a storm of emotions whose intensity threatened to overwhelm her senses yet promised unimaginable depths of discovery. The grand ballroom faded into insignificance, its opulence mere backdrop to what unfolded between them—a narrative spun from starlight and shadow.
+
+In the quiet stillness that followed, Elara found herself enveloped in a moment as profound as it was fleeting. Every beat of her heart seemed amplified within this silent communion, each shared glance a whisper across time itself. This connection with the stranger felt like an invitation to step into a world uncharted yet profoundly familiar—where emotions danced freely and secrets lay bare under the luminescent glow.
+
+Elara's breath came in gentle waves as she stood before the enigmatic figure, whose presence seemed both grounding and otherworldly. The grandeur of the ballroom melted away into a serene stillness that enveloped them like an embrace from the universe itself. It was as if time had stretched to allow this singular moment to linger indefinitely, each heartbeat echoing through eternity.
+
+Elara's eyes fluttered open with newfound clarity as she felt the stranger’s gaze softly penetrate her soul. The connection they shared seemed woven from threads of destiny, binding them in a tapestry rich with possibility and promise. In this exquisite moment, Elara experienced an overwhelming sense of belonging—a sensation that had eluded her amidst the grandeur and chaos of countless gatherings.
+
+The entity stood before Elara, their presence a magnetic force drawing her deeper into an inexplicable realm of emotions. Each beat of her heart echoed like whispers from another world, guiding her towards something profound yet intangible within their connection. As if carried by the currents of fate, she found herself enveloped in feelings that defied definition—both comforting and enigmatic.
+
+Elara's gaze lingered on the entity before her, a figure whose aura radiated an ineffable warmth that seemed to transcend mere presence. The grandeur of their surroundings faded into insignificance as if this connection alone held the universe in balance. In this serene stillness, Elara felt anchored by something deeper than mere acquaintance—a kinship forged through silent understanding and shared histories yet untold.
+
+In that profound silence, Elara sensed a presence both grounding and transcendent. The stranger before her exuded an aura of warmth, as if they were not merely occupying space but emanating from the very fabric of time itself. Their eyes held stories untold, inviting Elara into a world where emotions flowed freely, unburdened by words or expectations.
+
+Elara's heart danced to the rhythm of the grand ballroom—a symphony of light and shadow that enveloped her in its embrace. The air was alive with whispers of silk against marble and the faint scent of roses mingling with the warmth of polished wood. She moved through this opulent sea, each step a delicate waltz guided by an unseen hand.
+
+
+
+
+=== Generating technical explanation ===
+Applying factual profile with weight 0.8
+Starting generation with model: phi4:latest
+Narrative style: factual_to_creative
+Initial parameters: {'temperature': np.float64(0.36), 'top_p': np.float64(0.7299999999999999), 'top_k': np.float64(21.10780073079903), 'frequency_penalty': np.float64(0.015934781895679973), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 1...
+Applying introduction profile with weight 0.3
+Analyzing paragraph 1...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.998256266117096}, 'complexity': {'score': np.float64(0.6969570216129458), 'label': 'MEDIUM', 'details': {'avg_word_length': 5.53030303030303, 'vocabulary_richness': 0.8636363636363636, 'avg_sentence_length': 22.0}}, 'creativity': {'score': 0.25727272727272726, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.8863636363636364, 'descriptors': 1}}, 'formality': {'score': 0.07702020202020203, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007575757575757576, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7541761240901051), 'content_quality': np.float64(0.7744066147506905), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.07374716277296846), 'top_p': np.float64(-0.024582387590989487), 'top_k': np.float64(-2.4582387590989487), 'frequency_penalty': np.float64(-0.024582387590989487)}}
+Applying positive profile with weight 0.9
+Applying factual profile with weight 0.7
+Applying informal profile with weight 0.922979797979798
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('factual', 0.7), ('informal', 0.922979797979798), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(20.258593056466744), 'frequency_penalty': 0.1384469696969697, 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 2...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 2...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.999613344669342}, 'complexity': {'score': np.float64(0.704011799022291), 'label': 'HIGH', 'details': {'avg_word_length': 6.565217391304348, 'vocabulary_richness': 0.8260869565217391, 'avg_sentence_length': 18.4}}, 'creativity': {'score': 0.38153846153846155, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 1, 'unusual_words': 0.9076923076923077, 'descriptors': 2}}, 'formality': {'score': 0.0, 'label': 'INFORMAL'}, 'tension': {'score': 0.10521739130434783, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.005434782608695652, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.059782608695652176, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'joy', 'emotions': {'joy': 1, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7424167826858987), 'content_quality': np.float64(0.7352189702084782), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.07727496519423038), 'top_p': np.float64(-0.025758321731410128), 'top_k': np.float64(-2.5758321731410128), 'frequency_penalty': np.float64(-0.025758321731410128)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.704011799022291
+Applying informal profile with weight 1.0
+Applying neutral_emotion profile with weight 0.9402173913043478
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.704011799022291)), ('informal', 1.0), ('neutral_emotion', 0.9402173913043478)]
+Adjusted parameters: {'temperature': np.float64(0.6179347826086956), 'top_p': np.float64(0.8541847826086957), 'top_k': np.float64(36.450806927128525), 'frequency_penalty': np.float64(0.15), 'presence_penalty': np.float64(0.002989130434782611)}
+
+Generating paragraph 3...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 3...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9990097284317017}, 'complexity': {'score': np.float64(0.7569692575040641), 'label': 'HIGH', 'details': {'avg_word_length': 6.2272727272727275, 'vocabulary_richness': 0.8787878787878788, 'avg_sentence_length': 22.0}}, 'creativity': {'score': 0.33391304347826084, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 2, 'unusual_words': 0.8695652173913043, 'descriptors': 1}}, 'formality': {'score': 0.3734848484848484, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8081506368756308), 'content_quality': np.float64(0.7060742207568055), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.05755480893731075), 'top_p': np.float64(-0.01918493631243692), 'top_k': np.float64(-1.9184936312436918), 'frequency_penalty': np.float64(-0.01918493631243692)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7569692575040641
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7569692575040641)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(36.09966140617457), 'frequency_penalty': np.float64(0.24682233206510912), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 4...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 4...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9994564652442932}, 'complexity': {'score': np.float64(0.7828919662934205), 'label': 'HIGH', 'details': {'avg_word_length': 6.510869565217392, 'vocabulary_richness': 0.8913043478260869, 'avg_sentence_length': 23.0}}, 'creativity': {'score': 0.36746478873239435, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 2, 'unusual_words': 0.8873239436619719, 'descriptors': 2}}, 'formality': {'score': 0.08677536231884059, 'label': 'INFORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.010869565217391304, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7216046518232564), 'content_quality': np.float64(0.6633756393403824), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.08351860445302307), 'top_p': np.float64(-0.02783953481767436), 'top_k': np.float64(-2.783953481767436), 'frequency_penalty': np.float64(-0.02783953481767436)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7828919662934205
+Applying informal profile with weight 0.9132246376811595
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7828919662934205)), ('informal', 0.9132246376811595), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(35.41500804115629), 'frequency_penalty': np.float64(0.15905579686325796), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 5...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 5...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9981105327606201}, 'complexity': {'score': np.float64(0.6941568649328119), 'label': 'MEDIUM', 'details': {'avg_word_length': 6.555555555555555, 'vocabulary_richness': 0.875, 'avg_sentence_length': 24.0}}, 'creativity': {'score': 0.2903703703703704, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.8518518518518519, 'descriptors': 1}}, 'formality': {'score': 0.16759259259259257, 'label': 'INFORMAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.034722222222222224, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7932663393223526), 'content_quality': np.float64(0.7906579498820029), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.062020098203294224), 'top_p': np.float64(-0.020673366067764744), 'top_k': np.float64(-2.0673366067764745), 'frequency_penalty': np.float64(-0.020673366067764744)}}
+Applying positive profile with weight 0.9
+Applying factual profile with weight 0.7
+Applying informal profile with weight 0.8324074074074075
+Applying neutral_emotion profile with weight 0.9652777777777778
+Applied profiles: [('positive', 0.9), ('factual', 0.7), ('informal', 0.8324074074074075), ('neutral_emotion', 0.9652777777777778)]
+Adjusted parameters: {'temperature': np.float64(0.6077468094652368), 'top_p': np.float64(0.8515017566256018), 'top_k': np.float64(30.462880384266086), 'frequency_penalty': np.float64(0.13728054697734438), 'presence_penalty': np.float64(0.0036564429012345655)}
+
+Generating paragraph 6...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 6...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9994605183601379}, 'complexity': {'score': np.float64(0.7188671094302028), 'label': 'HIGH', 'details': {'avg_word_length': 6.651515151515151, 'vocabulary_richness': 0.8636363636363636, 'avg_sentence_length': 22.0}}, 'creativity': {'score': 0.22200000000000003, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.86, 'descriptors': 0}}, 'formality': {'score': 0.5108585858585859, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007575757575757576, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8609978691070957), 'content_quality': np.float64(0.7621328905697972), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04170063926787127), 'top_p': np.float64(-0.013900213089290426), 'top_k': np.float64(-1.3900213089290425), 'frequency_penalty': np.float64(-0.013900213089290426)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7188671094302028
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7188671094302028)), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(25.020241244871563), 'frequency_penalty': np.float64(0.07467668000064223), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 7...
+Applying introduction profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 7...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9997691512107849}, 'complexity': {'score': 0.8101371951219513, 'label': 'HIGH', 'details': {'avg_word_length': 6.548780487804878, 'vocabulary_richness': 0.8536585365853658, 'avg_sentence_length': 27.333333333333332}}, 'creativity': {'score': 0.24774193548387097, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.8387096774193549, 'descriptors': 1}}, 'formality': {'score': 0.09695121951219514, 'label': 'INFORMAL'}, 'tension': {'score': 0.14634146341463414, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.006097560975609756, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': 0.7777243558221872, 'content_quality': 0.6837337726199842, 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': -0.06668269325334382, 'top_p': -0.022227564417781277, 'top_k': -2.2227564417781274, 'frequency_penalty': -0.022227564417781277}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.8
+Applying factual profile with weight 0.7
+Applying informal profile with weight 0.9030487804878049
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', 0.8), ('factual', 0.7), ('informal', 0.9030487804878049), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(24.366906356287792), 'frequency_penalty': np.float64(0.14225730602877265), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 8...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 8...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9997038245201111}, 'complexity': {'score': np.float64(0.7115947464721747), 'label': 'HIGH', 'details': {'avg_word_length': 6.927536231884058, 'vocabulary_richness': 0.855072463768116, 'avg_sentence_length': 23.0}}, 'creativity': {'score': 0.25254901960784315, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.8627450980392157, 'descriptors': 1}}, 'formality': {'score': 0.41545893719806765, 'label': 'NEUTRAL'}, 'tension': {'score': 0.08000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8141033025834341), 'content_quality': np.float64(0.6946797633317469), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.055769009224969766), 'top_p': np.float64(-0.01858966974165659), 'top_k': np.float64(-1.858966974165659), 'frequency_penalty': np.float64(-0.01858966974165659)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7115947464721747
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7115947464721747)), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(24.96295692212817), 'frequency_penalty': np.float64(0.07568089324381706), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 9...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 9...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9992238283157349}, 'complexity': {'score': np.float64(0.6765934057090125), 'label': 'MEDIUM', 'details': {'avg_word_length': 6.52112676056338, 'vocabulary_richness': 0.9014084507042254, 'avg_sentence_length': 23.666666666666668}}, 'creativity': {'score': 0.2711904761904762, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.8392857142857143, 'descriptors': 1}}, 'formality': {'score': 0.39460093896713616, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.04225352112676056, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'anger', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 1, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.80229950236215), 'content_quality': np.float64(0.7390018323862255), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.059310149291355), 'top_p': np.float64(-0.019770049763785005), 'top_k': np.float64(-1.9770049763785003), 'frequency_penalty': np.float64(-0.019770049763785005)}}
+Applying positive profile with weight 0.9
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 0.9577464788732395
+Applied profiles: [('positive', 0.9), ('factual', 0.7), ('neutral_emotion', 0.9577464788732395)]
+Adjusted parameters: {'temperature': np.float64(0.5933004998320459), 'top_p': np.float64(0.8462147804587191), 'top_k': np.float64(29.83846726603634), 'frequency_penalty': np.float64(0.07256945329074728), 'presence_penalty': np.float64(0.01605633802816899)}
+
+Generating paragraph 10...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 10...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9998555183410645}, 'complexity': {'score': 0.8525240384615385, 'label': 'HIGH', 'details': {'avg_word_length': 6.788461538461538, 'vocabulary_richness': 0.8846153846153846, 'avg_sentence_length': 26.0}}, 'creativity': {'score': 0.26894736842105266, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.8947368421052632, 'descriptors': 0}}, 'formality': {'score': 0.4746794871794872, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.009615384615384616, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.05769230769230768, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'joy', 'emotions': {'joy': 1, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': 0.7777757042847504, 'content_quality': 0.5619496457489879, 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': -0.06666728871457488, 'top_p': -0.02222242957152496, 'top_k': -2.222242957152496, 'frequency_penalty': -0.02222242957152496}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.8
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 0.9423076923076923
+Applied profiles: [('positive', 0.9), ('high_complexity', 0.8), ('factual', 0.7), ('neutral_emotion', 0.9423076923076923)]
+Adjusted parameters: {'temperature': np.float64(0.5870914843069697), 'top_p': np.float64(0.8434268739550645), 'top_k': np.float64(24.42472814944952), 'frequency_penalty': np.float64(0.07188893559085395), 'presence_penalty': np.float64(0.022108342361863494)}
+
+Generating paragraph 11...
+Applying development profile with weight 0.3
+Analyzing paragraph 11...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9996211528778076}, 'complexity': {'score': np.float64(0.6996550519268613), 'label': 'MEDIUM', 'details': {'avg_word_length': 6.225352112676056, 'vocabulary_richness': 0.7746478873239436, 'avg_sentence_length': 23.666666666666668}}, 'creativity': {'score': 0.29400000000000004, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 2, 'unusual_words': 0.82, 'descriptors': 0}}, 'formality': {'score': 0.603755868544601, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8526472698821345), 'content_quality': np.float64(0.7273449480731387), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04420581903535966), 'top_p': np.float64(-0.014735273011786554), 'top_k': np.float64(-1.4735273011786554), 'frequency_penalty': np.float64(-0.014735273011786554)}}
+Applying positive profile with weight 0.9
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(21.283212625799496), 'frequency_penalty': np.float64(0.02003116567706562), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 12...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 12...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9992173910140991}, 'complexity': {'score': np.float64(0.7427209871779753), 'label': 'HIGH', 'details': {'avg_word_length': 6.554054054054054, 'vocabulary_richness': 0.8648648648648649, 'avg_sentence_length': 24.666666666666668}}, 'creativity': {'score': 0.29288135593220344, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.864406779661017, 'descriptors': 1}}, 'formality': {'score': 0.6092342342342343, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8402315336299986), 'content_quality': np.float64(0.6837196907881264), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04793053991100042), 'top_p': np.float64(-0.015976846637000143), 'top_k': np.float64(-1.5976846637000142), 'frequency_penalty': np.float64(-0.015976846637000143)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7427209871779753
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7427209871779753)), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(24.70551858328942), 'frequency_penalty': np.float64(0.07104078771335061), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 13...
+Applying development profile with weight 0.3
+Analyzing paragraph 13...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9996046423912048}, 'complexity': {'score': np.float64(0.7974216397012757), 'label': 'HIGH', 'details': {'avg_word_length': 6.913043478260869, 'vocabulary_richness': 0.9130434782608695, 'avg_sentence_length': 23.0}}, 'creativity': {'score': 0.3014814814814815, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.9074074074074074, 'descriptors': 1}}, 'formality': {'score': 0.4152173913043478, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7848193082711383), 'content_quality': np.float64(0.6333191010394651), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.0645542075186585), 'top_p': np.float64(-0.021518069172886168), 'top_k': np.float64(-2.1518069172886167), 'frequency_penalty': np.float64(-0.021518069172886168)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7974216397012757
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7974216397012757)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(28.883861684272325), 'frequency_penalty': np.float64(0.05992608671052438), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 14...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 14...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9992825388908386}, 'complexity': {'score': np.float64(0.7034789843984286), 'label': 'HIGH', 'details': {'avg_word_length': 6.714285714285714, 'vocabulary_richness': 0.8831168831168831, 'avg_sentence_length': 25.666666666666668}}, 'creativity': {'score': 0.3, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.9, 'descriptors': 1}}, 'formality': {'score': 0.511904761904762, 'label': 'NEUTRAL'}, 'tension': {'score': 0.04000000000000001, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.006493506493506494, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.032467532467532464, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8421064443765833), 'content_quality': np.float64(0.7265210156015713), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.047368066687025), 'top_p': np.float64(-0.015789355562341668), 'top_k': np.float64(-1.5789355562341667), 'frequency_penalty': np.float64(-0.015789355562341668)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7034789843984286
+Applying neutral_emotion profile with weight 0.9675324675324676
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7034789843984286)), ('neutral_emotion', 0.9675324675324676)]
+Adjusted parameters: {'temperature': np.float64(0.5993748839405604), 'top_p': np.float64(0.8493564247898345), 'top_k': np.float64(37.00349392358103), 'frequency_penalty': np.float64(0.2426169452461423), 'presence_penalty': np.float64(0.012337662337662321)}
+
+Generating paragraph 15...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 15...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9996546506881714}, 'complexity': {'score': np.float64(0.7608479562467753), 'label': 'HIGH', 'details': {'avg_word_length': 6.386666666666667, 'vocabulary_richness': 0.8666666666666667, 'avg_sentence_length': 25.0}}, 'creativity': {'score': 0.2535849056603774, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.8679245283018868, 'descriptors': 1}}, 'formality': {'score': 0.5931111111111111, 'label': 'NEUTRAL'}, 'tension': {'score': 0.12000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.03333333333333333, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8564620151311784), 'content_quality': np.float64(0.6459444965834134), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.04306139546064649), 'top_p': np.float64(-0.014353798486882164), 'top_k': np.float64(-1.4353798486882163), 'frequency_penalty': np.float64(-0.014353798486882164)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7608479562467753
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 0.9666666666666667
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7608479562467753)), ('factual', 0.7), ('neutral_emotion', 0.9666666666666667)]
+Adjusted parameters: {'temperature': np.float64(0.592651934236445), 'top_p': np.float64(0.8462437027443639), 'top_k': np.float64(24.812090487406202), 'frequency_penalty': np.float64(0.08088934642175102), 'presence_penalty': np.float64(0.012748917748917746)}
+
+Generating paragraph 16...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 16...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9996181726455688}, 'complexity': {'score': np.float64(0.6546777166080533), 'label': 'MEDIUM', 'details': {'avg_word_length': 6.387096774193548, 'vocabulary_richness': 0.9354838709677419, 'avg_sentence_length': 20.666666666666668}}, 'creativity': {'score': 0.23416666666666666, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.8541666666666666, 'descriptors': 1}}, 'formality': {'score': 0.3064516129032258, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.008064516129032258, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7764851407404598), 'content_quality': np.float64(0.7424056167252799), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.06705445777786205), 'top_p': np.float64(-0.02235148592595402), 'top_k': np.float64(-2.2351485925954018), 'frequency_penalty': np.float64(-0.02235148592595402)}}
+Applying positive profile with weight 0.9
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(29.821670971466514), 'frequency_penalty': np.float64(0.07221738231096318), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 17...
+Applying development profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 17...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9994925260543823}, 'complexity': {'score': np.float64(0.7915138613859235), 'label': 'HIGH', 'details': {'avg_word_length': 6.957746478873239, 'vocabulary_richness': 0.8873239436619719, 'avg_sentence_length': 23.666666666666668}}, 'creativity': {'score': 0.30518518518518517, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.9259259259259259, 'descriptors': 1}}, 'formality': {'score': 0.4877934272300469, 'label': 'NEUTRAL'}, 'tension': {'score': 0.08000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007042253521126761, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.8253661877573271), 'content_quality': np.float64(0.641078731206669), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.05239014367280188), 'top_p': np.float64(-0.017463381224267296), 'top_k': np.float64(-1.7463381224267294), 'frequency_penalty': np.float64(-0.017463381224267296)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7915138613859235
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7915138613859235)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(34.959822771439555), 'frequency_penalty': np.float64(0.24311960643540143), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 18...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 18...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9993717074394226}, 'complexity': {'score': np.float64(0.8037763144812972), 'label': 'HIGH', 'details': {'avg_word_length': 6.333333333333333, 'vocabulary_richness': 0.8533333333333334, 'avg_sentence_length': 25.0}}, 'creativity': {'score': 0.26871794871794874, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.8269230769230769, 'descriptors': 1}}, 'formality': {'score': 0.4788888888888889, 'label': 'NEUTRAL'}, 'tension': {'score': 0.12000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.006666666666666667, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.03333333333333333, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7540131863369407), 'content_quality': np.float64(0.5205826598776772), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.07379604409891778), 'top_p': np.float64(-0.02459868136630593), 'top_k': np.float64(-2.4598681366305932), 'frequency_penalty': np.float64(-0.02459868136630593)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.8
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 0.9666666666666667
+Applied profiles: [('positive', 0.9), ('high_complexity', 0.8), ('factual', 0.7), ('neutral_emotion', 0.9666666666666667)]
+Adjusted parameters: {'temperature': np.float64(0.5925428899419584), 'top_p': np.float64(0.8462024573742326), 'top_k': np.float64(24.484758664437493), 'frequency_penalty': np.float64(0.08054225708445727), 'presence_penalty': np.float64(0.012666666666666665)}
+
+Generating paragraph 19...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 19...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9997273087501526}, 'complexity': {'score': np.float64(0.7581176546532001), 'label': 'HIGH', 'details': {'avg_word_length': 6.932203389830509, 'vocabulary_richness': 0.9152542372881356, 'avg_sentence_length': 29.5}}, 'creativity': {'score': 0.2675, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.9375, 'descriptors': 1}}, 'formality': {'score': 0.6155367231638418, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7009614055457396), 'content_quality': np.float64(0.5656323453467998), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.08971157833627812), 'top_p': np.float64(-0.02990385944542604), 'top_k': np.float64(-2.990385944542604), 'frequency_penalty': np.float64(-0.02990385944542604)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7581176546532001
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7581176546532001)), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(24.63981086896025), 'frequency_penalty': np.float64(0.07237350676007498), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 20...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 20...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9995105266571045}, 'complexity': {'score': np.float64(0.7002927624934148), 'label': 'HIGH', 'details': {'avg_word_length': 6.753846153846154, 'vocabulary_richness': 0.9076923076923077, 'avg_sentence_length': 21.666666666666668}}, 'creativity': {'score': 0.332, 'label': 'MEDIUM', 'details': {'figurative': 0, 'sensory': 2, 'unusual_words': 0.86, 'descriptors': 1}}, 'formality': {'score': 0.4125641025641026, 'label': 'NEUTRAL'}, 'tension': {'score': 0.08000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.783567835017672), 'content_quality': np.float64(0.6557072375065852), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.06492964949469839), 'top_p': np.float64(-0.0216432164982328), 'top_k': np.float64(-2.16432164982328), 'frequency_penalty': np.float64(-0.0216432164982328)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7002927624934148
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7002927624934148)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(36.80680991848827), 'frequency_penalty': np.float64(0.2461624603723086), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 21...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 21...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.99967360496521}, 'complexity': {'score': np.float64(0.7623413841120474), 'label': 'HIGH', 'details': {'avg_word_length': 6.493827160493828, 'vocabulary_richness': 0.8888888888888888, 'avg_sentence_length': 27.0}}, 'creativity': {'score': 0.3414285714285714, 'label': 'MEDIUM', 'details': {'figurative': 1, 'sensory': 1, 'unusual_words': 0.8571428571428571, 'descriptors': 1}}, 'formality': {'score': 0.5958847736625514, 'label': 'NEUTRAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7233006034134932), 'content_quality': np.float64(0.5983729016022382), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.08300981897595203), 'top_p': np.float64(-0.02766993965865068), 'top_k': np.float64(-2.7669939658650677), 'frequency_penalty': np.float64(-0.02766993965865068)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7623413841120474
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7623413841120474)), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(35.96158619046914), 'frequency_penalty': np.float64(0.2667192116469142), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 22...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 22...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9995294809341431}, 'complexity': {'score': np.float64(0.7177117486892458), 'label': 'HIGH', 'details': {'avg_word_length': 6.211267605633803, 'vocabulary_richness': 0.8591549295774648, 'avg_sentence_length': 23.666666666666668}}, 'creativity': {'score': 0.274, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 1, 'unusual_words': 0.92, 'descriptors': 0}}, 'formality': {'score': 0.47535211267605637, 'label': 'NEUTRAL'}, 'tension': {'score': 0.08000000000000002, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007042253521126761, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.7677340346586745), 'content_quality': np.float64(0.6092882513107541), 'cognitive_state': 'focus', 'parameter_adjustments': {'temperature': np.float64(-0.06967978960239764), 'top_p': np.float64(-0.02322659653413255), 'top_k': np.float64(-2.322659653413255), 'frequency_penalty': np.float64(-0.02322659653413255)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7177117486892458
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7177117486892458)), ('factual', 0.7), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(25.113778767923623), 'frequency_penalty': np.float64(0.08185034776661769), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 23...
+Applying climax profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 23...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9993607401847839}, 'complexity': {'score': np.float64(0.8106565537272592), 'label': 'HIGH', 'details': {'avg_word_length': 6.7592592592592595, 'vocabulary_richness': 0.9814814814814815, 'avg_sentence_length': 27.0}}, 'creativity': {'score': 0.2619047619047619, 'label': 'LOW', 'details': {'figurative': 1, 'sensory': 0, 'unusual_words': 0.8095238095238095, 'descriptors': 0}}, 'formality': {'score': 0.7941358024691358, 'label': 'FORMAL'}, 'tension': {'score': 0.0, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.0, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.0, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6417781014270918), 'content_quality': np.float64(0.5102958272251217), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.07164437971458164), 'presence_penalty': np.float64(0.03582218985729082)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.8
+Applying factual profile with weight 0.7
+Applying formal profile with weight 0.7941358024691358
+Applying neutral_emotion profile with weight 1.0
+Applied profiles: [('positive', 0.9), ('high_complexity', 0.8), ('factual', 0.7), ('formal', 0.7941358024691358), ('neutral_emotion', 1.0)]
+Adjusted parameters: {'temperature': np.float64(0.6), 'top_p': np.float64(0.85), 'top_k': np.float64(24.381365345215084), 'frequency_penalty': np.float64(0.0162710356920784), 'presence_penalty': np.float64(0.0)}
+
+Generating paragraph 24...
+Applying resolution profile with weight 0.3
+Repetition detected, adjusting parameters to break pattern
+Applying creative profile with weight 0.8
+Analyzing paragraph 24...
+Paragraph analysis: {'sentiment': {'label': 'POSITIVE', 'score': 0.9990212917327881}, 'complexity': {'score': np.float64(0.7397447505346211), 'label': 'HIGH', 'details': {'avg_word_length': 6.746268656716418, 'vocabulary_richness': 0.9253731343283582, 'avg_sentence_length': 22.333333333333332}}, 'creativity': {'score': 0.2925, 'label': 'LOW', 'details': {'figurative': 0, 'sensory': 0, 'unusual_words': 0.9375, 'descriptors': 1}}, 'formality': {'score': 0.49751243781094534, 'label': 'NEUTRAL'}, 'tension': {'score': 0.1546268656716418, 'label': 'LOW_TENSION'}, 'dialogue': {'score': 0.007462686567164179, 'label': 'MINIMAL_DIALOGUE'}, 'emotionality': {'score': 0.04477611940298507, 'label': 'LOW_EMOTIONAL', 'dominant_emotion': 'neutral', 'emotions': {'joy': 0, 'sadness': 0, 'anger': 0, 'fear': 0, 'surprise': 0, 'disgust': 0, 'anticipation': 0, 'trust': 0}}}
+Meta-cognitive evaluation: {'goal_alignment': np.float64(0.6949674193315187), 'content_quality': np.float64(0.5365052494653788), 'cognitive_state': 'shift', 'parameter_adjustments': {'temperature': np.float64(0.06100651613369626), 'presence_penalty': np.float64(0.03050325806684813)}}
+Applying positive profile with weight 0.9
+Applying high_complexity profile with weight 0.7397447505346211
+Applying factual profile with weight 0.7
+Applying neutral_emotion profile with weight 0.9552238805970149
+Applied profiles: [('positive', 0.9), ('high_complexity', np.float64(0.7397447505346211)), ('factual', 0.7), ('neutral_emotion', 0.9552238805970149)]
+Adjusted parameters: {'temperature': np.float64(0.590231036180014), 'top_p': np.float64(0.844986950173514), 'top_k': np.float64(24.78610104632658), 'frequency_penalty': np.float64(0.0744833834990673), 'presence_penalty': np.float64(0.017861732238870717)}
+Detected conclusion, ending generation.
+
+Final technical response:
+As we delve into the world of quantum computing, it's important to start with its foundational principle: qubits. Unlike classical bits that exist in a state of 0 or 1, qubits can occupy both states simultaneously due to a phenomenon known as superposition. This duality allows quantum computers to process a vast amount of information at once, exponentially increasing their computational power compared to traditional computers.
+
+As we continue exploring the marvels of quantum computing, it's essential to highlight another remarkable feature that sets it apart: entanglement. When qubits become entangled, the state of one qubit is directly related to the state of another, regardless of distance. This interconnectedness enables a level of parallel processing and data correlation previously unimaginable in classical systems. With these principles—superposition and entanglement—the potential applications for quantum computers are vast and transformative. Industries like cryptography, drug discovery, and optimization problems stand on the cusp of breakthroughs as they harness this unprecedented computational prowess.
+
+The narrative tension gently builds as we introduce a key player in this revolutionary field: The Quantum Computer itself—a complex apparatus that embodies the principles of superposition and entanglement. Envisioned initially as an elusive concept, it gradually morphs into tangible reality through decades of relentless research and innovation. This entity, though still nascent in its widespread application, promises to reshape our understanding and interaction with data.
+
+As we turn our attention toward the hardware that underpins quantum computing, it's intriguing to explore how The Quantum Computer has evolved from theoretical sketches into tangible prototypes. At the heart of these machines are meticulously controlled environments where qubits operate at near absolute zero temperatures—conditions necessary to maintain their delicate state and exploit superposition effectively. This meticulous orchestration is achieved using advanced technologies like lasers, magnetic fields, and ultra-cold refrigeration systems. Engineers and scientists work in harmony with nature's subtle forces, coaxing the quantum world into cooperation, inch by cautious inch.
+
+Every advancement brings us closer to mastering the peculiarities of quantum mechanics, inching us toward a future where computing limitations are but a distant memory. This incremental progress is epitomized through innovations such as error correction protocols that safeguard qubit integrity against decoherence—a significant hurdle in maintaining superposition states. As these mechanisms become more robust and efficient, they incrementally bolster the reliability of quantum computations, edging us ever closer to practical applications.
+
+The journey towards harnessing The Quantum Computer's potential is enriched by its synergy with classical computing elements. By integrating conventional processors as control systems for qubits, researchers have fostered a unique symbiosis where traditional algorithms guide and optimize the complex quantum operations. This collaborative architecture is crucial in managing tasks that bridge both quantum and classical paradigms, such as error checking or orchestrating more sophisticated computations.
+
+As we progress further into this exciting journey, it's exhilarating to envision The Quantum Computer not just as an isolated entity but as part of a larger ecosystem where collaboration with classical systems elevates its capabilities. This integration exemplifies the harmonious blend between quantum and classical computing—a testament to human ingenuity in overcoming intricate challenges. In this hybrid landscape, conventional computers perform tasks they excel at while seamlessly delegating complex calculations to their quantum counterparts, creating an efficient partnership that accelerates problem-solving.
+
+The spirit of collaboration extends into the realm of algorithm development, where researchers from diverse fields unite to unlock new possibilities in computation. Quantum algorithms are being crafted with unprecedented precision and ingenuity, each one a testament to human creativity in translating abstract mathematical concepts into practical applications. These specialized algorithms capitalize on the unique properties of quantum mechanics—superposition and entanglement—to solve complex problems at speeds previously deemed unattainable.
+
+This spirit of collaboration and innovation becomes increasingly evident as we delve deeper into specific areas, such as optimization algorithms tailored for The Quantum Computer. Here lies a promising frontier where classical techniques like gradient descent inspire new quantum counterparts that leverage entanglement to explore solution spaces more holistically. This synergy accelerates the search for optimal solutions in vast datasets—tasks essential across fields ranging from logistics and finance to artificial intelligence.
+
+As we continue our exploration, it's thrilling to consider how The Quantum Computer serves as a crucible for cross-disciplinary collaboration—a realm where physicists, computer scientists, and mathematicians converge to unlock its full potential. This collective effort fosters a quantum spirit that transcends traditional boundaries, sparking innovation through shared insights and diverse perspectives.
+
+The collaborative nature of this journey is further exemplified by the role of open-source platforms in democratizing access to quantum computing resources. These initiatives allow researchers from around the globe to contribute to and benefit from advancements in quantum algorithms and hardware design. By fostering a community-driven approach, these platforms accelerate innovation and ensure that knowledge and tools are shared widely, breaking down barriers to entry for institutions with limited resources.
+
+The democratization of quantum computing is further enhanced by emerging platforms designed to facilitate access to quantum resources worldwide. These platforms serve as collaborative hubs where researchers can not only share their findings but also simulate complex quantum operations using advanced frameworks and tools. By providing a virtual environment, these digital ecosystems enable individuals from diverse backgrounds to experiment with quantum algorithms without needing direct access to physical qubits—a crucial step toward inclusive innovation.
+
+These platforms are more than mere technological advancements; they embody the spirit of collective progress, bridging geographical divides and fostering an inclusive community. By offering cloud-based quantum computing services, they empower researchers from various disciplines to explore new horizons without the prohibitive costs traditionally associated with building and maintaining quantum hardware. This accessibility is a game-changer, catalyzing innovation across fields as varied as chemistry, materials science, and machine learning.
+
+The narrative's positive tone continues by underscoring the broader societal impact that The Quantum Computer heralds—transformative change across industries once deemed resistant to digital evolution. Healthcare stands prominently among them, with quantum computing poised to revolutionize drug discovery through its ability to model molecular interactions at unprecedented scales and speeds. This leap in computational capability promises faster development cycles for new medications, potentially reducing the time and cost needed to bring life-saving treatments from laboratory to patient.
+
+In this transformative era of healthcare innovation, The Quantum Computer emerges as a pivotal ally in expediting drug discovery processes. By leveraging its immense processing power, quantum computing is capable of simulating complex biological molecules with an accuracy that traditional computers struggle to match. This capability not only accelerates the identification of promising drug candidates but also enhances our understanding of intricate biochemical pathways—key steps toward developing more effective treatments for a myriad of diseases.
+
+This quantum leap in healthcare opens new vistas for personalized medicine, where The Quantum Computer facilitates tailoring treatments at an individual level. By analyzing vast datasets encompassing genetic information and lifestyle factors, quantum algorithms can identify patterns that elude classical methods. This precision heralds a future where therapies are not just universally effective but finely tuned to each patient's unique biological makeup.
+
+As we continue our journey with The Quantum Computer at the forefront of transformative change, its potential reaches into financial services—a sector keenly aware of quantum's disruptive promise. Here, optimization and complex calculations form the bedrock upon which risk assessments and portfolio management are built. With traditional methods often constrained by computational limitations, quantum algorithms offer a breakthrough—enhancing accuracy in forecasting market behaviors and crafting sophisticated investment strategies with unparalleled efficiency.
+
+This potential of The Quantum Computer also manifests brightly within cryptography, where it challenges the very foundations upon which current security protocols are constructed. As we venture into this domain, the entity's unique capabilities shine through as both a disruptor and an enhancer—capable of shattering existing encryption methods while simultaneously paving the way for ultra-secure quantum-resistant algorithms. This duality encapsulates the essence of transition inherent in our journey: embracing change as a gateway to innovation.
+
+Within this dynamic landscape, The Quantum Computer continues to be at the center of pioneering efforts toward achieving scalable and robust quantum networks—an endeavor crucial for realizing true distributed quantum computing capabilities. Collaborations among leading research institutions, tech giants, and governmental bodies have spurred remarkable strides in developing interconnective technologies that can link multiple quantum processors over vast distances.
+
+The vision of a networked future where The Quantum Computer facilitates communication across continents illuminates the path forward for distributed quantum computing. This interconnectedness promises to revolutionize not only data sharing but also collaborative scientific research, unlocking new realms of possibility. As scientists worldwide gain access to shared qubit resources through these networks, they can collectively address complex challenges ranging from climate modeling to cybersecurity.
+
+This burgeoning vision continues as we explore the theme of a quantum vision networked with other entities across global scales. The potential for distributed quantum computing is enhanced by innovations such as quantum repeaters and satellite-based communication protocols that bridge vast distances, ensuring coherent qubit transfer over long ranges without degradation. These advances signify not merely technological breakthroughs but also symbolize human ingenuity in weaving together a worldwide tapestry of computational power—a testament to the collaborative spirit driving this transformative era.
+
+As we approach the zenith of our exploration into The Quantum Computer's role within a global network, it becomes clear that its influence extends far beyond computation. Envisioned as an integral component of an interconnected world, The Quantum Computer plays a pivotal role in fostering international collaborations and advancements across disciplines. By enabling seamless data sharing through advanced quantum networks, researchers are able to tackle complex global challenges with unprecedented precision.
+
+This harmonious integration propels us into envisioning quantum computing as more than just a tool; it becomes the backbone of innovative systems connecting disparate fields, thereby fostering synergies that were once unattainable. Imagine an era where international collaborations are not hindered by physical or technological constraints—a quantum-enhanced world where collective intelligence thrives across borders.
+
+The narrative continues as we witness how The Quantum Computer's influence permeates the field of artificial intelligence, forging a new frontier in machine learning and data processing. By leveraging its vast computational prowess, quantum systems can exponentially accelerate AI model training processes that are traditionally time-consuming for classical computers. This acceleration enables more rapid advancements in developing sophisticated algorithms capable of tackling complex problems across various sectors.
